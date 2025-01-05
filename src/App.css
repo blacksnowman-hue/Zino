@@ -1,0 +1,198 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Navbar Styles */.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+
+
+.navbar button {
+  background-color: #0077ff;
+margin-left: auto;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+ 
+
+.navbadebar .drag-item img {
+  max-width: 100px;
+  max-height: 100px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .drag-item img:hover {
+  transform: scale(1.1);
+}
+r p {
+
+  color: #1e1e2f;
+  size:10rem;
+  font-weight: bold;
+
+}
+
+.navbar button:hover {
+  background-color: #45a049;
+}
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 50px;  /* Below the navbar */
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.sidebar button {
+  background-color: #1e1e2f;
+  border: none;
+  color: white;
+  padding: 12px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #333;
+}
+
+/* Styling for the block ID */
+.block-id {
+  padding-bottom: 10px; /* Add some padding below the block ID */
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* List style for the buttons */
+ul button {
+  display: block; /* Ensure each button is displayed on a new line */
+  margin-bottom: 10px; /* Add some space between buttons */
+  width: 100%; /* Make buttons full width (optional) */
+}
+
+.sidebar ul {
+  list-style-type: none; /* Remove the default list markers */
+  padding: 0; /* Remove default padding */
+  margin: 0;
+}
+
+.sidebar .drag-item {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .drag-item img {
+  max-width: 100px;
+  max-height: 100px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .drag-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Canvas Styles */
+/* Position the canvas below the navbar and right of the sidebar */
+/* Canvas Styles */
+.canvas {
+  margin-left: 270px;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow: auto;
+  position: absolute;
+  top: 60px;
+  left: 270px;
+  width: calc(100% - 270px);
+  background-color: #ffffff;
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Block styling */
+.block {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, left 0.2s ease, top 0.2s ease; /* Smooth transition */
+}
+/* Block Content Styling */
+.block-content {
+  cursor: grab;
+  transition: opacity 0.3s ease;
+  position: absolute;
+}
+
+
+/* When content is being dragged */
+.block-content.dragging {
+  opacity: 0.5;
+}
+
+
+/* Style for child elements */
+.child-element {
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.json-viewer {
+  background-color: grey;
+  padding: 20px;
+ 
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+}
+
